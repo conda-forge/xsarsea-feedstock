@@ -1,5 +1,5 @@
 {% set name = "xsarsea" %}
-{% set version = "0.9" %}
+{% set version = "1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/xsarsea-{{ version }}.tar.gz
-  sha256: 8067277e77a3fc891827c76d3eac4e0d2762a3d6e862a0eb3fca8f41e449f90b
+  sha256: 6efa7374ce14764a5e0a410febf27da43cc9001f352f6c47086cee5ba1d38552
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
