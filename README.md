@@ -239,6 +239,7 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@Skealz](https://github.com/Skealz/)
 * [@agrouaze](https://github.com/agrouaze/)
 * [@vincelhx](https://github.com/vincelhx/)
 
