@@ -1,25 +1,28 @@
 {% set name = "xsarsea" %}
-{% set version = "1.6" %}
+{% set version = "1.7" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/xsarsea-{{ version }}.tar.gz
-  sha256: b08236d51714ff52a7e5b10f6773370c03ad7eb1606f2359eed9c347d08a93ff
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/xsarsea-{{ version }}.tar.gz
+  sha256: 7a0b5aaf1f23ddd2e53a535c878c30d593a34b289aebae921c889c1090304770
 
 build:
+  noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   number: 0
 
 requirements:
   host:
-    - python
-    - setuptools-scm
+    - python {{ python_min }}
+    - setuptools >=64.0
+    - setuptools-scm >=7
     - pip
   run:
-    - python
+    - python >={{ python_min }}
     - numpy
     - xarray
     - opencv
@@ -40,6 +43,7 @@ test:
   commands:
     - pip check
   requires:
+    - python {{ python_min }}
     - pip
 
 about:
