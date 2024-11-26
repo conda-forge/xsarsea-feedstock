@@ -1,5 +1,5 @@
 {% set name = "xsarsea" %}
-{% set version = "1.7" %}
+{% set version = "1.8" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/xsarsea-{{ version }}.tar.gz
-  sha256: 7a0b5aaf1f23ddd2e53a535c878c30d593a34b289aebae921c889c1090304770
+  sha256: 020ff3f0cb6da81847a4bda8eed5ebb11949c66dfbeb7e3c1e0073379750fcee
 
 build:
   noarch: python
@@ -36,6 +36,7 @@ requirements:
     - netcdf4
     - matplotlib-base
     - xrft
+    - h5netcdf
 
 test:
   imports:
