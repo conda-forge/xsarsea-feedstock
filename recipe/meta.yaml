@@ -1,5 +1,5 @@
 {% set name = "xsarsea" %}
-{% set version = "1.8.1" %}
+{% set version = "1.9" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/xsarsea-{{ version }}.tar.gz
-  sha256: d9ea73091d8713b5f7b0400fe2876062841e86169608b10f371861be7612c8ea
+  sha256: 7a3cb03ca9a32c133a58e3b80d4e686c9fb9ea973d639271ffa1104652f6e060
 
 build:
   noarch: python
